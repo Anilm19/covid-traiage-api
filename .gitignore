@@ -1,0 +1,18 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Triage.Api/Middlewares/bin
+/Triage.Api/Middlewares/obj
+/Triage.Api/Models/bin
+/Triage.Api/MongoDB/bin
+/Triage.Api/MongoDB/obj
+/Triage.Api/Services/bin
+/Triage.Api/Services/obj
+/Triage.Api/Triage.Api/bin
+/Triage.Api/Triage.Api/obj
+/Triage.Api/Utility/bin
+/Triage.Api/Utility/obj
+/Triage.Api/.vs/Triage.Api
+/Triage.Api/Models/obj
+/Triage.Api/Triage.Api/Properties/PublishProfiles

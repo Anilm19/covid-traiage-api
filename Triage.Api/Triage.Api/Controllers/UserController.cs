@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Models.Entity;
+using Models.Enum;
 using Services;
 using Triage.Api.Controllers.Base;
 
@@ -20,6 +21,16 @@ namespace Triage.Api.Controllers
         }
         [HttpGet("getbyemail/{email}")]
         public virtual IActionResult GetByEmail(string email)
+        {
+            return Ok(_userService.GetUserByEmail(email));
+        }
+        [HttpGet("getusersbypersmission/{persmission}")]
+        public virtual IActionResult GetUsersByPersmission(UserPermission persmission)
+        {
+            return Ok(_userService.GetUsersByPermission(persmission));
+        }
+        [HttpGet("promotetohealthworker/{email}")]
+        public virtual IActionResult PromoteToHealthWorker(string email)
         {
             return Ok(_userService.GetUserByEmail(email));
         }

@@ -1,19 +1,18 @@
 ﻿using Models.Constants;
 using Models.Entity.Base;
 using MongoDB.Bson.Serialization.Attributes;
-using System.Collections.Generic;
 using Utility;
 
 
 namespace Models.Entity
 {
-    [MongoCollectionNameAttribute(Table.USER_RELATIONSHIP_TABLE)]
+    [MongoCollectionNameAttribute(Table.USER_PATIENT_RELATIONSHIP_TABLE)]
     [BsonIgnoreExtraElements]
-    class UserRelationships : BaseEntity
+    public class UserPatientRelationship : BaseEntity
     {
         [BsonElement("userId")]
         public string UserId { get; set; }
-        [BsonElement("assignedPatients")]
-        public List<string> AssignedPatients { get; set; }
+        [BsonElement("patientId")]
+        public string PatientId { get; set; }
     }
 }

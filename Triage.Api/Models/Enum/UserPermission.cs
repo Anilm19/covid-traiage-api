@@ -2,10 +2,9 @@
 {
     public enum UserPermission
     {
-        USER,
+        VOLUNTEER,
         PATIENT,
         HEALTHWORKER,
-        VOLUNTEER,
         HEALTHCOORDINATOR,
         ADMIN
     }

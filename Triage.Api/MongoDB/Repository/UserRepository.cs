@@ -1,8 +1,10 @@
 ﻿using Models.Entity;
+using Models.Enum;
 using MongoDB.Base;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Driver;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace MongoDB.Repository
@@ -27,11 +29,18 @@ namespace MongoDB.Repository
                 return entity;
             }
             else
+            {
+                entity.Permission = data.Permission;
                 return Update(entity);
+            }
         }
         public User GetUserByEmail(string email)
         {
             return GetCollection().AsQueryable().FirstOrDefault(usr => usr.Email.ToUpper() == email.ToUpper());
+        }
+        public IEnumerable<User> GetUsersByPermission(UserPermission permission)
+        {
+            return GetCollection().AsQueryable().Where(usr => usr.Permission== permission);
         }
     }
 }

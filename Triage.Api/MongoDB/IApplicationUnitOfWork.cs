@@ -7,5 +7,6 @@ namespace MongoDB
         IUserRepository Users { get; }
         IPatientRepository Patient { get; }
         IPatientTriageRepository PatientTriage { get; }
+        IUserPatientRelationshipRepository PatientRelationshipRepository { get; }
     }
 }

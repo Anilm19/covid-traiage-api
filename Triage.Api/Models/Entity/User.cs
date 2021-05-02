@@ -22,7 +22,7 @@ namespace Models.Entity
         public string Email { get; set; }
 
         [BsonElement("gender")]
-        public Gender Gender { get; set; }
+        public Gender? Gender { get; set; }
 
         [BsonElement("birthDate")]
         public DateTime? BirthDate { get; set; }

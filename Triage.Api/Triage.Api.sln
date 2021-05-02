@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triage.Api", "Triage.Api\Triage.Api.csproj", "{65078565-04AC-42CF-B596-5672EA6169E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Triage.Api", "Triage.Api\Triage.Api.csproj", "{65078565-04AC-42CF-B596-5672EA6169E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Middlewares", "Middlewares\Middlewares.csproj", "{459D32D6-532B-4B36-B5A0-173080CEE099}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Middlewares", "Middlewares\Middlewares.csproj", "{459D32D6-532B-4B36-B5A0-173080CEE099}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{FD71BF15-7CC1-4720-8438-87B07DFC2D94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{FD71BF15-7CC1-4720-8438-87B07DFC2D94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB", "MongoDB\MongoDB.csproj", "{0AAD9C08-611E-4ADE-80E5-45CF9BEFC34F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB", "MongoDB\MongoDB.csproj", "{0AAD9C08-611E-4ADE-80E5-45CF9BEFC34F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{7176A34D-1102-4D72-AEE6-6F482DA20172}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utility", "Utility\Utility.csproj", "{7176A34D-1102-4D72-AEE6-6F482DA20172}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{8921A899-BD2F-42B7-8C2A-844C6B8465D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{8921A899-BD2F-42B7-8C2A-844C6B8465D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Models.Entity;
 using Services;
+using System.ComponentModel.DataAnnotations;
 using Triage.Api.Controllers.Base;
 
 namespace Triage.Api.Controllers
@@ -27,6 +28,12 @@ namespace Triage.Api.Controllers
         public virtual IActionResult GetPatientDetails(string id)
         {
             return Ok(_patientService.GetPatientDetailsById(id));
+        }
+        [HttpGet("assignhealthworker/{patientid}")]
+        public virtual IActionResult GetPatientDetails(string patientid,[FromQuery][Required] string userId)
+        {
+            _patientService.AssignHealthWorkerToPatient(patientid, userId);
+            return Ok();
         }
     }
 }

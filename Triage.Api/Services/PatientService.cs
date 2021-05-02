@@ -30,5 +30,10 @@ namespace Services
             else
                 throw new System.Exception("No Patient Found !");
         }
+
+        public void AssignHealthWorkerToPatient(string patientid, string userid)
+        {
+            _applicationUnitOfWork.PatientRelationshipRepository.AssignPatientToHealthWorker(patientid, userid);
+        }
     }
 }

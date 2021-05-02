@@ -7,5 +7,6 @@ namespace Services
     {
         Patient GetPatinetByICMRID(string email);
         PatientDetails GetPatientDetailsById(string id);
+        void AssignHealthWorkerToPatient(string patientid,string userid);
     }
 }

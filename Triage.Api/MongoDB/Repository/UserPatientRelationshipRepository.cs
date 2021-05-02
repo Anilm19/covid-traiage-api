@@ -3,6 +3,7 @@ using MongoDB.Base;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Driver;
+using System.Collections.Generic;
 using System.Linq;
 
 
@@ -22,7 +23,7 @@ namespace MongoDB.Repository
         public void AssignPatientToHealthWorker(string patientId, string userId)
         {
             var pat=  GetCollection().AsQueryable().Where(usr => usr.PatientId == patientId);
-            if (pat == null)
+            if (pat == null || pat.Count()<1)
             {
                 var data = new UserPatientRelationship();
                 data._id = mongoDBService.GetUniqueMongoDatabaseIDForRecord();
@@ -35,6 +36,15 @@ namespace MongoDB.Repository
                 data.UserId = userId;
                 Update(data);
             }
+            else
+            {
+                throw new System.Exception("One or more Healthworker Assigned");
+            }
+        }
+
+        public IEnumerable<string> GetPatientsAssignedForUser(string userId)
+        {
+            return GetCollection().AsQueryable().Where(usr => usr.UserId == userId).Select(a=>a.PatientId);
         }
     }
 }

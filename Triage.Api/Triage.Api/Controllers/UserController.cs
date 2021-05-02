@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Models.DTO;
 using Models.Entity;
 using Models.Enum;
 using Services;
@@ -24,8 +25,8 @@ namespace Triage.Api.Controllers
         {
             return Ok(_userService.GetUserByEmail(email));
         }
-        [HttpGet("getusersbypersmission/{persmission}")]
-        public virtual IActionResult GetUsersByPersmission(UserPermission persmission)
+        [HttpGet("getusersbypermission/{persmission}")]
+        public virtual IActionResult GetUsersByPermission(UserPermission persmission)
         {
             return Ok(_userService.GetUsersByPermission(persmission));
         }
@@ -39,5 +40,18 @@ namespace Triage.Api.Controllers
         {
             return Ok(_userService.CreateUser(item));
         }
+        [HttpPost("assignpatients")]
+        public IActionResult AssignPatients([FromBody] AssignPatientRequest request)
+        {
+            _userService.AssignPatients(request);
+            return Ok();
+        }
+        [HttpGet("assignpatients/{email}")]
+        public IActionResult GetAssignedPatients(string email)
+        {
+            _userService.GetAssignedPatients(email);
+            return Ok();
+        }
+
     }
 }

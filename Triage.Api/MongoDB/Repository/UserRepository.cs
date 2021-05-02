@@ -21,6 +21,7 @@ namespace MongoDB.Repository
         }
         public override User Add(User entity)
         {
+            entity.IsActive = true;
             var data = GetUserByEmail(entity.Email);
             if (data == null)
             {
